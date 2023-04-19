@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+      "jsx": "react-jsx",
+      "esModuleInterop": true,
+      "resolveJsonModule": true,
+      "allowSyntheticDefaultImports": true,
+      "lib": ["ES2021", "DOM"],
+      "types": ["webpack-env"],
+      "target": "es6",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "baseUrl": "./src",
+      "paths": {
+        "*": ["types/*"]
+      }
+    },
+    "include": [
+      "src/react-app-env.d.ts",
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "src",
+      "src/**/*.svg" // путь к папке, содержащей SVG-файлы
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+}
