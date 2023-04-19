@@ -1,0 +1,7 @@
+# Игнорировать файлы IDE
+.idea/
+.vscode/
+*.iml
+
+# Игнорировать папку node_modules
+node_modules/
