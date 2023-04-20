@@ -1,3 +1,9 @@
+@import './assets/styles/global/customProperties.css';
+
+html, body, #root, .App {
+  height: 100%;
+}
+
 .App {
   text-align: center;
 }

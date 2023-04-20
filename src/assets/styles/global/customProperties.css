@@ -1,0 +1,27 @@
+:root {
+        /* Глобальные цвета проекта. */
+        --cl-black: #000000;
+        --cl-white: rgba(255, 255, 255, 0.95);;
+    
+        /* Основные цвета проекта и текста */
+        --cl-global: #232a32;
+        --cl-global-invert: #ffffff;
+        --cl-grey: #a6acb3;
+        --cl-lg-grey: #ecf1f4;
+        --cl-elem-grey: #688999;
+        --cl-divider-grey: #d4e0e8;
+    
+        /* Цвета проекта */
+        --cl-blue: rgb(64, 122, 214);
+        --cl-dark-blue-gray: rgb(35, 48, 68);
+        --cl-dark-blue: rgb(27, 38, 53);
+
+        --cl-red: #ed3333;
+        --cl-lg-red: #f07575;
+        --cl-dk-red: #e00606;
+        --cl-green: #5bb14b;
+        --cl-lg-orange: #ffc804;
+        --cl-orange: #ff9900;
+        --cl-dk-blue: #3750a3;
+        --cl-violet: #5e79d2;
+}

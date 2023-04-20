@@ -2,6 +2,7 @@
 .idea/
 .vscode/
 *.iml
+.DS_Store
 
 # Игнорировать папку node_modules
 node_modules/

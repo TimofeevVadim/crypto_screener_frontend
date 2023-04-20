@@ -1,27 +1,28 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Logo from './components/icons/Logo/Logo';
+import Main from './Layouts/Main';
 
+import MainPage from './views/MainPage/MainPage';
+import ScreenerPage from './views/ScreenerPage/ScreenerPage';
+import SettingsPage from './views/SettingsPage/SettingsPage';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <Logo />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Main
+          content={
+            <Routes>
+              <Route path="/" element={<MainPage />} />
+              <Route path="/screener" element={<ScreenerPage />} />
+              <Route path="/settings" element={<SettingsPage />} />
+            </Routes>
+          }
+        />
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
