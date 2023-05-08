@@ -2,5 +2,6 @@ import * as React from 'react';
 import './ScreenerPage.scss';
 
 export default function ScreenerPage() {
-  return <div>ScreenerPage</div>;
+  console.log('ScreenerPage');
+  return <h1>Screener page</h1>;
 }

@@ -23,14 +23,16 @@ import ListItemText from '@mui/material/ListItemText';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import SettingsIcon from '@mui/icons-material/Settings';
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 
 type MiniDrawerProps = {
   content: React.ReactNode;
 };
 
-export default function MiniDrawer({ content }: MiniDrawerProps) {
+export function MiniDrawer({ content }: MiniDrawerProps) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  console.log('MiniDrawer');
 
   const navigate = useNavigate();
 
@@ -41,6 +43,9 @@ export default function MiniDrawer({ content }: MiniDrawerProps) {
         break;
       case 'Settings':
         navigate('/settings');
+        break;
+      case 'Interexchange':
+        navigate('/interexchange');
         break;
       default:
         navigate('/');
@@ -57,7 +62,7 @@ export default function MiniDrawer({ content }: MiniDrawerProps) {
   };
 
   return (
-    <Box sx={{ display: 'flex', height: '100%', background: 'var(--cl-dark-blue-gray)' }}>
+    <Box sx={{ display: 'flex', height: '100%', background: 'var(--cl-dark-blue)' }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
@@ -89,7 +94,7 @@ export default function MiniDrawer({ content }: MiniDrawerProps) {
           </IconButton>
         </DrawerHeader>
         <List>
-          {['Dashboard', 'Screener', 'Settings'].map(text => (
+          {['Dashboard', 'Interexchange', 'Screener', 'Settings'].map(text => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }} onClick={() => handleLinkClick(text)}>
               <ListItemButton
                 sx={{
@@ -108,6 +113,7 @@ export default function MiniDrawer({ content }: MiniDrawerProps) {
                   {text === 'Screener' && <BarChartIcon sx={{ fill: 'var(--cl-white)' }} />}
                   {text === 'Dashboard' && <DashboardIcon sx={{ fill: 'var(--cl-white)' }} />}
                   {text === 'Settings' && <SettingsIcon sx={{ fill: 'var(--cl-white)' }} />}
+                  {text === 'Interexchange' && <CurrencyExchangeIcon sx={{ fill: 'var(--cl-white)' }} />}
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0, color: 'var(--cl-white)' }} />
               </ListItemButton>
@@ -122,3 +128,5 @@ export default function MiniDrawer({ content }: MiniDrawerProps) {
     </Box>
   );
 }
+
+export default React.memo(MiniDrawer);

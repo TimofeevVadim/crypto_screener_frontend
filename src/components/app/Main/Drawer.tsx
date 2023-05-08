@@ -4,7 +4,7 @@ import { styled, Theme, CSSObject } from '@mui/material/styles';
 const drawerWidth = 240;
 
 const openedMixin = (theme: Theme): CSSObject => ({
-  background: 'var(--cl-dark-blue)',
+  background: 'var(--cl-dark-blue-gray)',
   width: drawerWidth,
   transition: theme.transitions.create('width', {
     easing: theme.transitions.easing.sharp,
@@ -14,7 +14,7 @@ const openedMixin = (theme: Theme): CSSObject => ({
 });
 
 const closedMixin = (theme: Theme): CSSObject => ({
-  background: 'var(--cl-dark-blue)',
+  background: 'var(--cl-dark-blue-gray)',
   transition: theme.transitions.create('width', {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,

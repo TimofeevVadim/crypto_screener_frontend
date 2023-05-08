@@ -1,0 +1,13 @@
+.c-line-preloader {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+}
+
+.c-line-preloader .MuiLinearProgress-bar {
+    background-color: var(--cl-white);
+}
+.c-line-preloader .css-eglki6-MuiLinearProgress-root {
+    background-color: var(--cl-dark-blue);
+}

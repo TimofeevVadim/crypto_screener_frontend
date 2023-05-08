@@ -6,8 +6,12 @@ import Main from './Layouts/Main';
 import MainPage from './views/MainPage/MainPage';
 import ScreenerPage from './views/ScreenerPage/ScreenerPage';
 import SettingsPage from './views/SettingsPage/SettingsPage';
+import InterexchangePage from './views/InterexchangePage/InterexchangePage';
+console.log('start');
 
-const App: React.FC = () => {
+export default function App() {
+  console.log('APp');
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -16,6 +20,7 @@ const App: React.FC = () => {
             <Routes>
               <Route path="/" element={<MainPage />} />
               <Route path="/screener" element={<ScreenerPage />} />
+              <Route path="/interexchange" element={<InterexchangePage />} />
               <Route path="/settings" element={<SettingsPage />} />
             </Routes>
           }
@@ -23,6 +28,4 @@ const App: React.FC = () => {
       </BrowserRouter>
     </div>
   );
-};
-
-export default App;
+}
