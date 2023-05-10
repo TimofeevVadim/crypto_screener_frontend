@@ -18,7 +18,9 @@ const exchange = ({ item, location }) => {
       </div>
       <span className="price-difference-card__content-exchange-inscription">Volume</span>
       <div className="price-difference-card__content-exchange-volume">
-        <span>{item.volumeUSDT}$</span>
+        <span>
+          {item.volumeUSDT}$ - {item.allVolumeUSDT}$
+        </span>
       </div>
       <span className="price-difference-card__content-exchange-inscription">Percentage</span>
       <div className="price-difference-card__content-exchange-percentage">
@@ -37,7 +39,9 @@ export function PriceDifferenceCard({ item }) {
           <span>{item.pair}</span>
         </div>
         <div>
-          <span>{item.persent}%</span>
+          <span>
+            {item.minPersent}% - {item.persent}%
+          </span>
         </div>
         <span className="price-difference-card__content-time">{item.time}</span>
         <div className="price-difference-card__content-exchanges">
